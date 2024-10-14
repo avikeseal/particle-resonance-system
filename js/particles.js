@@ -15,3 +15,15 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 //adds the renderer's canvas to the webpage so it appears on the screen
 document.body.appendChild(renderer.domElement);
 
+//adding a cube:
+//cretaes a cube with dimensions of 1x1x1 (width, height, depth)
+//geometry object contains the vertices and faces that define the 3D shape of the cube
+const geometry = new THREE.BoxGeometry();
+//MeshBasicMaterial defines how the surface of the cube looks 
+//MeshBasicMaterial doesn't react to lighting
+const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+//cube is now our 3D object, a Mesh takes geometry and material 
+//and combines them to render something visible
+const cube = new THREE.Mesh(geometry, material);
+//adds cube to the scene
+scene.add(cube);
