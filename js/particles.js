@@ -28,4 +28,23 @@ camera.position.z = 5;
 let angle = 0;
 const radius = 2; //orbit radius
 
+function animate() {
+    requestAnimationFrame(animate);
+
+    //update angle
+    angle += 0.02;
+
+    //particle 1 moves clockwise:
+    particle1.position.x = radius * Math.cos(angle);
+    particle1.position.y = radius * Math.sin(angle);
+
+    //particle 2 moves counterclockwise:
+    particle2.position.x = radius * Math.cos(-angle);
+    particle2.position.y = radius * Math.sin(-angle);
+
+    renderer.render(scene, camera);
+}
+
+animate();
+
 
