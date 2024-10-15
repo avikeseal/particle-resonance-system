@@ -20,3 +20,12 @@ const particle = new THREE.Mesh(geometry, material);
 
 scene.add(particle1);
 scene.add(particle2);
+
+//camera position:
+camera.position.z = 5;
+
+//animation loop:
+let angle = 0;
+const radius = 2; //orbit radius
+
+
