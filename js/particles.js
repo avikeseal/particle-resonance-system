@@ -9,3 +9,14 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appenChild(renderer.domElement);
+
+//adding black particles:
+//particle size:
+const geometry = new THREE.SphereGeometry(0.2, 32, 32)
+//color:
+const material = new THREE.MeshBasicMaterial({color: 0x000000});
+const particle1 = new THREE.Mesh(geometry, material);
+const particle = new THREE.Mesh(geometry, material);
+
+scene.add(particle1);
+scene.add(particle2);
