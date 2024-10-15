@@ -34,6 +34,10 @@ camera.position.z = 5;
 //render loop:
 function animate() {
     requestAnimationFrame(animate);
+
+    //rotate the cube on both x and y axes:
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
     renderer.render(scene, camera);
 }
 
